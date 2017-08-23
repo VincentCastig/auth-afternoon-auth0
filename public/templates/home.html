@@ -2,12 +2,8 @@
 <p> This is where the user would change their settings </p>
 
 
-<li><a ui-sref="home">Home</a></li>
-<li><a ui-sref="friend">Friend</a></li>
-<li><a ui-sref="login">Login</a></li>
 
-
-<div ng-repeat="follower in followers">
+<div ng-repeat="follower in followers track by $index">
   <a ui-sref="friend({github_username: follower.login})"><img ng-src="{{follower.avatar_url}}" alt=""></a>
   <a href="{{follower.html_url}}">{{follower.login}}</a>
 </div>
